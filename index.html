@@ -16,10 +16,12 @@
 
             <div class="choose-panel">
                 <div class="flex-container-row center">
-                    <div v-for="variant in variants" :key="variant.variantID" class="flex-container-row variant fat">
-                        <p @mouseover="updateImage(variant.variantImage)">
-                            {{variant.variantType}}
-                        </p>
+                    <div v-for="(ship, index) in ships"
+                         :key="ship.shipID"
+                         class="flex-container-row ship fat"
+                         @mouseover="updateImage(index)"
+                    >
+                        {{ship.shipName}}
                     </div>
                 </div>
 
