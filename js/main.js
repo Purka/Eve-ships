@@ -93,7 +93,7 @@ const app = new Vue({
             this.selectedShip = index;
         },
 
-        showModuls() {
+        showParameters() {
             !this.isModules ? this.isModules = true : this.isModules = false;
         }
     },

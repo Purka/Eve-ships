@@ -24,11 +24,18 @@
                     <button v-for="(ship, index) in ships"
                          :key="ship.shipID"
                          class="ship-button fat"
-                         @click="showModuls"
                          @mouseover="updateImage(index)"
                     >
                         {{ship.shipName}}
                     </button>
+                </div>
+                <div class="flex-container-row center fat">
+                    <div class="checkbox checkbox-primary">
+                        <input id="checkbox" type="checkbox" @click="showParameters">
+                        <label for="checkbox">
+                            Show Parameters
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
