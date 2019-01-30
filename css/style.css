@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+img {
+    height: 512px;
+    width: 512px;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    background: url('../src/images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.image-panel {
+    align-self: center;
+}
+
+.choose-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.amount {
+    margin: 10px;
+}
+
+.variant {
+    border: solid black 2px;
+    background-color: #ec896a;
+    border-radius: 10px;
+}
+
+.fat {
+    margin: 5px;
+    padding: 5px;
+}
