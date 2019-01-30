@@ -10,8 +10,13 @@
 
     <div id="app">
         <div class="flex-container-column">
-            <div class="image-panel">
+            <div class="image-panel flex-container-row">
                 <img :src="image">
+                <div v-if="isModules" class="modules-panel fat boxBackground">
+                    <ul>
+                        <li v-for="element in shipFit">{{element}}</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="choose-panel">
@@ -19,6 +24,7 @@
                     <button v-for="(ship, index) in ships"
                          :key="ship.shipID"
                          class="ship-button fat"
+                         @click="showModuls"
                          @mouseover="updateImage(index)"
                     >
                         {{ship.shipName}}
