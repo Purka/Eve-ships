@@ -16,20 +16,13 @@
 
             <div class="choose-panel">
                 <div class="flex-container-row center">
-                    <div v-for="(ship, index) in ships"
+                    <button v-for="(ship, index) in ships"
                          :key="ship.shipID"
-                         class="flex-container-row ship fat"
+                         class="ship-button fat"
                          @mouseover="updateImage(index)"
                     >
                         {{ship.shipName}}
-                    </div>
-                </div>
-
-                <div class="flex-container-row center">
-                    <button @click="addToCart" class="btn btn-info" >Add to cart</button>
-                    <div class="amount">
-                        Amount ({{amount}})
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
