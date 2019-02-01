@@ -9,36 +9,7 @@
 <body>
 
     <div id="app">
-        <div class="flex-container-column">
-            <div class="image-panel flex-container-row">
-                <img :src="image">
-                <div v-if="isModules" class="modules-panel blue-color-scheme fat">
-                    <ul>
-                        <li v-for="element in shipFit">{{element}}</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="choose-panel">
-                <div class="flex-container-row center">
-                    <button v-for="(ship, index) in ships"
-                         :key="ship.shipID"
-                         class="ship-button blue-color-scheme fat"
-                         @mouseover="updateImage(index)"
-                    >
-                        {{ship.shipName}}
-                    </button>
-                </div>
-                <div class="flex-container-row center fat">
-                    <div class="checkbox checkbox-primary">
-                        <input id="checkbox" type="checkbox" @click="showParameters">
-                        <label for="checkbox">
-                            Show Parameters
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
+       <ship></ship>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
