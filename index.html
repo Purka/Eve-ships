@@ -12,7 +12,7 @@
         <div class="flex-container-column">
             <div class="image-panel flex-container-row">
                 <img :src="image">
-                <div v-if="isModules" class="modules-panel fat boxBackground">
+                <div v-if="isModules" class="modules-panel blue-color-scheme fat">
                     <ul>
                         <li v-for="element in shipFit">{{element}}</li>
                     </ul>
@@ -23,7 +23,7 @@
                 <div class="flex-container-row center">
                     <button v-for="(ship, index) in ships"
                          :key="ship.shipID"
-                         class="ship-button fat"
+                         class="ship-button blue-color-scheme fat"
                          @mouseover="updateImage(index)"
                     >
                         {{ship.shipName}}
